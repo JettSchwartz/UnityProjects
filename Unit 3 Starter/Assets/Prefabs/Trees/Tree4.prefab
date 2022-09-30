@@ -13,9 +13,10 @@ GameObject:
   - component: {fileID: 4592497737128618676}
   - component: {fileID: 4581938394695408658}
   - component: {fileID: 2111673511423399776}
+  - component: {fileID: -4159014626633413920}
   m_Layer: 0
   m_Name: Tree4
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -114,3 +115,15 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 3842199439719177302, guid: f7bf108d249584c38ac16b5c74ec45d8, type: 3}
+--- !u!114 &-4159014626633413920
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2646753376191744865}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f2b4fc93cd7344f8e92c285430639e2d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

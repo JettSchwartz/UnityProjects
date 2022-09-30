@@ -524,6 +524,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1293377944748734352, guid: 81798d0593e7240a4a7bae3286b5eba7, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: f80c4b91fb62e44ea8f6731a52f4bbc1, type: 2}
     - target: {fileID: 1293377944756143184, guid: 81798d0593e7240a4a7bae3286b5eba7, type: 3}
       propertyPath: m_Name
       value: Orc
@@ -620,6 +624,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c086a478f30de4bc484e8479eb253a58, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameOver: 0
 --- !u!1 &1484288037
 GameObject:
   m_ObjectHideFlags: 0
