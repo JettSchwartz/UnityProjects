@@ -11,9 +11,11 @@ GameObject:
   - component: {fileID: 5048216616419408365}
   - component: {fileID: 8187831994301298248}
   - component: {fileID: 6216641598373544578}
+  - component: {fileID: -7181706866100540779}
+  - component: {fileID: -423045684503915811}
   m_Layer: 0
   m_Name: BronzeCoin
-  m_TagString: Untagged
+  m_TagString: Coin
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -82,3 +84,28 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &-7181706866100540779
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5567872906061898583}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 01e7553ae90df604897e2d776e1d8c73, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!65 &-423045684503915811
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5567872906061898583}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.34641, y: 0.4, z: 0.1}
+  m_Center: {x: 0, y: 0.2, z: 0}

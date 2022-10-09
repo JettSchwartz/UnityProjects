@@ -4,50 +4,32 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    private Rigidbody playerRB;
-    private float jumpForce = 100;
-    private float squatForce = 100;
-    private float gravityMod = 15f;
-    private bool isGrounded = true;
+    private float horizontal;
+    private float speed = 2f;
     public bool gameOver = false;
-
-    private Animator anim;
-    private string run = "Run";
-    private string jump = "Flip";
-    private string roll = "Roll";
-    //private string death = "Death3";
-
-    private AudioSource playerAudio;
-    public AudioClip jumpSound;
-    public AudioClip explosionSound;
-
-    public ParticleSystem splatter;
-    public ParticleSystem explosion;
-
-    private void Awake()
-    {
-        playerRB = GetComponent<Rigidbody>();
-        anim = GetComponent<Animator>();
-        playerAudio = GetComponent<AudioSource>();
-    }
 
     // Start is called before the first frame update
     void Start()
     {
-        Physics.gravity *= gravityMod;
-        anim.SetBool(run, true);
-        splatter.Play();
+        
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space) && isGrounded == true && !gameOver)
+        if (gameOver == false)
         {
-            anim.SetTrigger(jump);
-            playerAudio.PlayOneShot(jumpSound);
-            playerRB.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
-            isGrounded = false;
+            horizontal = Input.GetAxis("Horizontal");
+            transform.Translate(Vector3.right * Time.deltaTime * horizontal * speed);
+
+            if (transform.position.x > 1)
+            {
+                transform.position = new Vector3(1, transform.position.y, transform.position.z);
+            }
+            if (transform.position.x < -1.4f)
+            {
+                transform.position = new Vector3(-1.4f, transform.position.y, transform.position.z);
+            }
         }
     }
 }
