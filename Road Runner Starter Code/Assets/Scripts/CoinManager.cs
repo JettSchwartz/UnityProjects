@@ -41,7 +41,7 @@ public class CoinManager : MonoBehaviour
         {
 
             GameObject randomCoin = coins[Random.Range(0, coins.Length)];
-            float randomTime = Random.Range(2f,3f);
+            float randomTime = Random.Range(0.5f,1f);
             Instantiate(randomCoin, spawnPosition, randomCoin.transform.rotation);
             Invoke("SpawnCoin", randomTime);
         }

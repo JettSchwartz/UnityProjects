@@ -11,6 +11,7 @@ public class SpawnManager : MonoBehaviour
     private PlayerController playerControllerScript;
     private float finalX;
 
+
     private void Awake()
     {
         playerControllerScript = GameObject.Find("Soldier").GetComponent<PlayerController>();
@@ -41,7 +42,7 @@ public class SpawnManager : MonoBehaviour
         if (playerControllerScript.gameOver == false)
         {
             GameObject randomObstacle = obstacles[Random.Range(0, obstacles.Length)];
-            float randomTime = Random.Range(0f, 3f);
+            float randomTime = Random.Range(0.75f, 1.5f);
 
             Instantiate(randomObstacle, new Vector3(finalX, spawnPosition.y, spawnPosition.z), randomObstacle.transform.rotation);
             Invoke("SpawnObstacle", randomTime);
