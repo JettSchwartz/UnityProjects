@@ -33,4 +33,11 @@ public class MoveCoin : MonoBehaviour
             }
         }
     }
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag("Human"))
+        {
+            Destroy(gameObject);
+        }
+    }
 }

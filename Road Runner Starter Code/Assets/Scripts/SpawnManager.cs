@@ -6,8 +6,6 @@ public class SpawnManager : MonoBehaviour
 {
     public GameObject[] obstacles;
     private Vector3 spawnPosition = new Vector3(0, 2, -18);
-    private float obstacleY = 2;
-    private float obstacleZ = 18;
     private PlayerController playerControllerScript;
     private float finalX;
 

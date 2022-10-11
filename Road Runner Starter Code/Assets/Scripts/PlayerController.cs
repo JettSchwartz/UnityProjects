@@ -44,7 +44,7 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (isGrounded == true)
+        if (isGrounded == true && !gameOver)
         {
             if (Input.GetKeyDown(KeyCode.W) && !gameOver)
             {
@@ -57,7 +57,6 @@ public class PlayerController : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.S) && !gameOver)
             {
                 anim.SetTrigger(roll);
-                playerAudio.PlayOneShot(jumpSound);
             }
         }
         if (gameOver == false)
@@ -73,6 +72,34 @@ public class PlayerController : MonoBehaviour
             {
                 transform.position = new Vector3(-1.4f, transform.position.y, transform.position.z);
             }
+        }
+    }
+    private void OnCollisionEnter(Collision collision)
+    {
+        Debug.Log("collision " + collision.gameObject.tag);
+
+        if (isGrounded == false)
+        {
+            if (collision.gameObject.CompareTag("Ground"))
+            {
+                isGrounded = true;
+            }
+        }
+
+        if (collision.gameObject.CompareTag("Obstacle"))
+        {
+            anim.SetTrigger(death);
+            gameOver = true;
+            explosion.Play();
+            playerAudio.PlayOneShot(explosionSound);
+        }
+    }
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag("Coin"))
+        {
+            coin.Play();
+            playerAudio.PlayOneShot(coinSound);
         }
     }
 }
