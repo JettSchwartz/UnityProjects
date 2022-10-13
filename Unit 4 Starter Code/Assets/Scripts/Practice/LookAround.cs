@@ -14,7 +14,8 @@ public class LookAround : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        // Hides our mouse
+        Cursor.lockState = CursorLockMode.Locked;
     }
 
     // Called at the end of each frame - prevent jittery camera movement

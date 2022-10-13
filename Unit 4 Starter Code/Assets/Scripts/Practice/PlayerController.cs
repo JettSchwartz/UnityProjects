@@ -47,6 +47,7 @@ public class PlayerController : MonoBehaviour
 
     private void Jump()
     {
+        // If the space key is pressed and we are on the ground we jump
         if (Input.GetKeyDown(KeyCode.Space) && isGrounded == true)
         {
             playerRB.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
@@ -56,6 +57,7 @@ public class PlayerController : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
+        // When we collide back with the ground we can jump again
         if (collision.gameObject.CompareTag("Ground"))
         {
             isGrounded = true;
