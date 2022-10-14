@@ -13,6 +13,9 @@ public class PlayerController : MonoBehaviour
 
     private float jumpForce = 5f;
     private bool isGrounded = true;
+    private bool hasPu = false;
+
+    private float puStrength = 10f;
 
     private void Awake()
     {
@@ -61,6 +64,23 @@ public class PlayerController : MonoBehaviour
         if (collision.gameObject.CompareTag("Ground"))
         {
             isGrounded = true;
+        }
+        // If the player collides the enemy and has the powerup, we will knockback the enemy
+        if (collision.gameObject.CompareTag("Enemy") && hasPu == true)
+        {
+            Rigidbody enemyRB = collision.gameObject.GetComponent<Rigidbody>();
+            Vector3 away = collision.gameObject.transform.position - transform.position;
+            enemyRB.AddForce(away * puStrength, ForceMode.Impulse);
+        }
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        // If the player collides with the powerup, it will destroy it and turn on hasPu
+        if (other.CompareTag("Powerup"))
+        {
+            Destroy(other.gameObject);
+            hasPu = true;
         }
     }
 }
