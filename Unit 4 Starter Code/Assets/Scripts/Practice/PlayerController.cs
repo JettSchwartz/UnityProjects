@@ -7,6 +7,9 @@ public class PlayerController : MonoBehaviour
     [SerializeField]
     private Transform look;
 
+    [SerializeField]
+    private GameObject puIndicator;
+
     private Rigidbody playerRB;
     private float speed = 3.0f;
     private float gravity = 1.0f;
@@ -26,11 +29,14 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         Physics.gravity *= gravity;
+        Debug.Log("Destroy the enemies by pushing them into the goals.");
     }
 
     // Update is called once per frame
     void Update()
     {
+        // Make the powerup follow the player around
+        puIndicator.transform.position = transform.position + new Vector3(0f, 0.5f, 0f);
         Move();
         Jump();
     }
@@ -79,8 +85,21 @@ public class PlayerController : MonoBehaviour
         // If the player collides with the powerup, it will destroy it and turn on hasPu
         if (other.CompareTag("Powerup"))
         {
+            Debug.Log("You collected a powerup, you have 7 seconds to use it!");
             Destroy(other.gameObject);
             hasPu = true;
+            puIndicator.SetActive(true);
+            // Trigger the delay for the powerup
+            StartCoroutine(CountdownTimer());
         }
     }
+
+    // Controls how long the player has the powerup
+    private IEnumerator CountdownTimer()
+    {
+        yield return new WaitForSeconds(7);
+        hasPu = false;
+        puIndicator.SetActive(false);
+    }
+
 }
