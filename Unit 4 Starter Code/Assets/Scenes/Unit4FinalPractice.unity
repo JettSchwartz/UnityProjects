@@ -208,7 +208,7 @@ GameObject:
   - component: {fileID: 291186506}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -783,6 +783,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyPrefab: {fileID: 3341070127408547342, guid: 74164ae66f4c84f38af8352b1ccee643, type: 3}
   puPrefab: {fileID: 6519551195323379207, guid: fc18ccdbb34a546cbb7fd68fa5aab90e, type: 3}
+  enemy2: {fileID: 7072576290889495733, guid: de13b396b5d504a93b4a9b3efbcdbbdc, type: 3}
 --- !u!1 &2005883662
 GameObject:
   m_ObjectHideFlags: 0

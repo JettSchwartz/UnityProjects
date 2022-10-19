@@ -85,10 +85,11 @@ public class PlayerMover : MonoBehaviour
         // If the player collides with the powerup, it will destroy it and turn on hasPu
         if (other.CompareTag("Powerup"))
         {
-            Debug.Log("You collected a powerup, you have 7 seconds to use it!");
+            Debug.Log("You collected a powerup, you have 10 seconds to use it!");
             Destroy(other.gameObject);
             hasPu = true;
             puIndicator.SetActive(true);
+
             // Trigger the delay for the powerup
             StartCoroutine(CountdownTimer());
         }
@@ -97,7 +98,7 @@ public class PlayerMover : MonoBehaviour
     // Controls how long the player has the powerup
     private IEnumerator CountdownTimer()
     {
-        yield return new WaitForSeconds(7);
+        yield return new WaitForSeconds(10);
         hasPu = false;
         puIndicator.SetActive(false);
     }

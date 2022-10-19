@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyMover : MonoBehaviour
+public class MainEnemy : MonoBehaviour
 {
     private float speed = 3.0f;
     private Rigidbody enemyRB;
@@ -20,7 +20,14 @@ public class EnemyMover : MonoBehaviour
     void Update()
     {
         // Make the enemy move towards the player
-        Vector3 look = (player.transform.position - transform.position).normalized;
+        Vector3 look = (transform.position - player.transform.position).normalized;
         enemyRB.AddForce(look * speed);
+    }
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            Destroy(gameObject);
+        }
     }
 }

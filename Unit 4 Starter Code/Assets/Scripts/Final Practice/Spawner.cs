@@ -10,6 +10,9 @@ public class Spawner : MonoBehaviour
     [SerializeField]
     private GameObject puPrefab;
 
+    [SerializeField]
+    private GameObject enemy2;
+
     private int waveCount = 1;
     private int enemyCount;
 
@@ -24,13 +27,14 @@ public class Spawner : MonoBehaviour
     void Update()
     {
         // Find how many enemies are in my scene
-        enemyCount = FindObjectsOfType<EnemyMover>().Length;
+        enemyCount = FindObjectsOfType<MainEnemy>().Length;
         if (enemyCount == 0)
         {
             Debug.Log("Congratulations, you defeated " + waveCount + " enemies");
             waveCount = waveCount + 1;
             SpawnEnemy(waveCount);
             SpawnPowerup();
+            SpawnEnemy2();
         }
     }
 
@@ -40,7 +44,14 @@ public class Spawner : MonoBehaviour
         for (int i = 0; i < wave; i++)
         {
             Instantiate(enemyPrefab, NewPosition(), enemyPrefab.transform.rotation);
+
         }
+    }
+
+    // Spawn running enemeies each at beginning of each wave
+    private void SpawnEnemy2()
+    {
+        Instantiate(enemy2, NewPosition(), enemy2.transform.rotation);
     }
 
     // Spawn a powerup at the beginning of each wave
