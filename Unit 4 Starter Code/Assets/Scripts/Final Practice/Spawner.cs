@@ -30,11 +30,11 @@ public class Spawner : MonoBehaviour
         enemyCount = FindObjectsOfType<MainEnemy>().Length;
         if (enemyCount == 0)
         {
+            SpawnEnemy2();
             Debug.Log("Congratulations, you defeated " + waveCount + " enemies");
             waveCount = waveCount + 1;
-            SpawnEnemy(waveCount);
+            SpawnEnemy(waveCount-2);
             SpawnPowerup();
-            SpawnEnemy2();
         }
     }
 
@@ -57,7 +57,7 @@ public class Spawner : MonoBehaviour
     // Spawn a powerup at the beginning of each wave
     private void SpawnPowerup()
     {
-        Instantiate(puPrefab, NewPosition() - new Vector3(0, 2f, 0f), puPrefab.transform.rotation);
+        Instantiate(puPrefab, NewPosition() - new Vector3(0, 3f, 0f), puPrefab.transform.rotation);
     }
 
 

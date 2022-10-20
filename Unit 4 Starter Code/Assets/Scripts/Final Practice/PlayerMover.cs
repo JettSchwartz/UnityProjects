@@ -74,9 +74,14 @@ public class PlayerMover : MonoBehaviour
         // If the player collides the enemy and has the powerup, we will knockback the enemy
         if (collision.gameObject.CompareTag("Enemy") && hasPu == true)
         {
+            speed = 7f;
             Rigidbody enemyRB = collision.gameObject.GetComponent<Rigidbody>();
             Vector3 away = collision.gameObject.transform.position - transform.position;
             enemyRB.AddForce(away * puStrength, ForceMode.Impulse);
+        }
+        if (hasPu == false)
+        {
+            speed = 3.0f;
         }
     }
 
