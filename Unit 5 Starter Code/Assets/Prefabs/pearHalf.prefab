@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 785493113287875339}
   - component: {fileID: 3793150353850359001}
   - component: {fileID: 7229367011367945002}
+  - component: {fileID: 1841708374861155000}
   m_Layer: 0
   m_Name: pearHalf
   m_TagString: Untagged
@@ -117,3 +118,15 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 2585757643584478703, guid: e49e384168f2d4f7ab0709eea3bbb5db, type: 3}
+--- !u!114 &1841708374861155000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1289821298245352158}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60186960c1ede408c816bdc8a083ba7b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

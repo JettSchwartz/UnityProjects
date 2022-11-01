@@ -8,6 +8,9 @@ public class TargetMove : MonoBehaviour
 
     private GameManager gmScript;
 
+    [SerializeField]
+    private ParticleSystem splash;
+
     private void Awake()
     {
         targetRB = GetComponent<Rigidbody>();
@@ -46,13 +49,19 @@ public class TargetMove : MonoBehaviour
 
     private void OnMouseDown()
     {
-        for (int i = 0; i < gmScript.targetPrefabs.length; i++)
+        for (int i = 0; i < gmScript.targetPrefab.Length; i++)
         {
-
+            if (gameObject.CompareTag(gmScript.targetPrefab[i].tag))
+            {
+                Instantiate(splash, gameObject.transform.position, gameObject.transform.rotation);
+                Instantiate(gmScript.targetHalves[i], gameObject.transform.position, gameObject.transform.rotation);
+                Instantiate(gmScript.targetHalves[i], gameObject.transform.position, gameObject.transform.rotation);
+                Destroy(gameObject);
+            }
         }
 
 
 
-        Destroy(gameObject);
+        
     }
 }

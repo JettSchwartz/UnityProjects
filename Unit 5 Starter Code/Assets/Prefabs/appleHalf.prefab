@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 7628281990829356450}
   - component: {fileID: 668277973790055649}
   - component: {fileID: 5472206075338680146}
+  - component: {fileID: 1267081495465611924}
   m_Layer: 0
   m_Name: appleHalf
   m_TagString: Untagged
@@ -117,3 +118,15 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 6324286251053626827, guid: fa6aadf41c53d41eaa4e32c40b8eda58, type: 3}
+--- !u!114 &1267081495465611924
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8277025118267053175}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60186960c1ede408c816bdc8a083ba7b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

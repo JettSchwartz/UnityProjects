@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 8646802300774318194}
   - component: {fileID: 2234869202334564010}
   - component: {fileID: 2217388346044687796}
+  - component: {fileID: -8215693786616672009}
   m_Layer: 0
   m_Name: lemonHalf
   m_TagString: Untagged
@@ -115,3 +116,15 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 8192659685997795860, guid: 016f1bead3c9749e1983aaa18b5de800, type: 3}
+--- !u!114 &-8215693786616672009
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7854102451211772327}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60186960c1ede408c816bdc8a083ba7b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
