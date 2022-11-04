@@ -11,6 +11,9 @@ public class TargetMove : MonoBehaviour
     [SerializeField]
     private ParticleSystem splash;
 
+    [SerializeField]
+    private int points;
+
     private void Awake()
     {
         targetRB = GetComponent<Rigidbody>();
@@ -44,9 +47,17 @@ public class TargetMove : MonoBehaviour
         if(transform.position.x > 7f || transform.position.y < -1f)
         {
             Destroy(gameObject);
+            // When the item is not an onion, the player is penalized and loses a life
+            if (!gameObject.CompareTag("Onion"))
+            {
+                gmScript.UpdateScore(-5);
+                gmScript.UpdateLives();
+                gmScript.PlaySound("Miss");
+            }
         }
     }
 
+    // Checks to see which prefab has been chopped
     private void OnMouseDown()
     {
         for (int i = 0; i < gmScript.targetPrefab.Length; i++)
@@ -56,12 +67,11 @@ public class TargetMove : MonoBehaviour
                 Instantiate(splash, gameObject.transform.position, gameObject.transform.rotation);
                 Instantiate(gmScript.targetHalves[i], gameObject.transform.position, gameObject.transform.rotation);
                 Instantiate(gmScript.targetHalves[i], gameObject.transform.position, gameObject.transform.rotation);
+                gmScript.UpdateScore(points);
+                // Pass the fruit that has been clicked on
+                gmScript.PlaySound(gmScript.targetPrefab[i].tag);
                 Destroy(gameObject);
             }
         }
-
-
-
-        
     }
 }

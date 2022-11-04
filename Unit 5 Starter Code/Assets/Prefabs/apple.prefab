@@ -129,3 +129,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   splash: {fileID: 6749170435469796329, guid: 08521acaa3bf145ddb5de179aec8f21b, type: 3}
+  points: 10
