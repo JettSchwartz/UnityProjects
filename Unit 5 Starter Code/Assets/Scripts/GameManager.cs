@@ -44,14 +44,25 @@ public class GameManager : MonoBehaviour
     [SerializeField]
     private AudioClip chop, miss, wrong;
 
+    [SerializeField]
+    private GameObject titleScreen;
+
+    public int size;
+
     private void Awake()
     {
         gameAudio = GetComponent<AudioSource>();
     }
 
-    // Start is called before the first frame update
-    void Start()
+    // This will run after the difficulty is chosen
+    public void StartGame(int difficulty)
     {
+        // Hide the title screen
+        titleScreen.gameObject.SetActive(false);
+
+        // Based on difficulty, the size will be set
+        size = difficulty;
+
         score = 0;
         lives = 3;
         startFruit = StartCoroutine(SpawnTarget());
@@ -64,6 +75,10 @@ public class GameManager : MonoBehaviour
             yield return new WaitForSeconds(spawnRate);
             int choice = Random.Range(0, targetPrefab.Length);
             GameObject fruit = targetPrefab[choice];
+
+            // Change size of fruit
+            fruit.transform.localScale = new Vector3(size, size, size);
+
             Instantiate(fruit, StartingPosition(), fruit.transform.rotation);
         }
     }

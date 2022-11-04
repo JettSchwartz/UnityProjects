@@ -65,6 +65,10 @@ public class TargetMove : MonoBehaviour
             if (gameObject.CompareTag(gmScript.targetPrefab[i].tag))
             {
                 Instantiate(splash, gameObject.transform.position, gameObject.transform.rotation);
+
+                // Change size of fruit halves
+                gmScript.targetHalves[i].transform.localScale = new Vector3(gmScript.size, gmScript.size, gmScript.size);
+
                 Instantiate(gmScript.targetHalves[i], gameObject.transform.position, gameObject.transform.rotation);
                 Instantiate(gmScript.targetHalves[i], gameObject.transform.position, gameObject.transform.rotation);
                 gmScript.UpdateScore(points);
