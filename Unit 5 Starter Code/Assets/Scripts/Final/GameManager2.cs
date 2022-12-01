@@ -1,0 +1,138 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using TMPro;
+using UnityEngine.UI;
+
+public class GameManager2 : MonoBehaviour
+{
+    [SerializeField]
+    public GameObject[] targetPrefab;
+
+    [SerializeField]
+    public GameObject[] targetHalves;
+
+    private float spawnRate = 3.0f;
+
+    private int score, lives;
+    
+    // This adds TMPro object
+    [SerializeField]
+    private TextMeshProUGUI scoreText;
+
+    [SerializeField]
+    private TextMeshProUGUI livesText, gameOverText;
+
+    // This adds a UI button
+    [SerializeField]
+    private Button restartButton;
+
+    private Coroutine startFruit;
+
+    // This will keep track of wheter the game is over or not
+    private bool isGameActive = true;
+
+    private AudioSource gameAudio;
+
+    [SerializeField]
+    private AudioClip chop, miss, wrong;
+
+    [SerializeField]
+    private GameObject titleScreen;
+
+    public int size;
+
+    private void Awake()
+    {
+        gameAudio = GetComponent<AudioSource>();
+    }
+
+    // This will run after the difficulty is chosen
+    public void StartGame(int difficulty)
+    {
+        // Hide the title screen
+        titleScreen.gameObject.SetActive(false);
+
+        // Based on difficulty, the size will be set
+        size = difficulty;
+
+        score = 0;
+        lives = 3;
+        startFruit = StartCoroutine(SpawnTarget());
+    }
+
+    private IEnumerator SpawnTarget()
+    {
+        while (isGameActive)
+        {
+            yield return new WaitForSeconds(spawnRate);
+            int choice = Random.Range(0, targetPrefab.Length);
+            GameObject fruit = targetPrefab[choice];
+
+            // Change size of fruit
+            fruit.transform.localScale = new Vector3(size, size, size);
+
+            Instantiate(fruit, StartingPosition(), fruit.transform.rotation);
+        }
+    }
+
+    // This weill adjust score
+    public void UpdateScore(int points)
+    {
+        score += points;
+        scoreText.text = "Score: " + score;
+    }
+
+    public void UpdateLives()
+    {
+        lives--;
+        livesText.text = "Lives: " + lives;
+        
+        if (lives ==0)
+        {
+            // Change the game status to inactive
+            GameOver();
+        }
+    }
+
+    public void PlaySound(string fruit)
+    {
+        if (fruit == "Onion")
+        {
+            gameAudio.PlayOneShot(wrong);
+        }
+        else if (fruit == "Miss")
+        {
+            gameAudio.PlayOneShot(miss);
+        }
+        else 
+        {
+            gameAudio.PlayOneShot(chop);
+        }
+    }
+    private void GameOver()
+    {
+        isGameActive = false;
+        gameOverText.gameObject.SetActive(true);
+        restartButton.gameObject.SetActive(true);
+        StopCoroutine(startFruit);
+    }
+
+    public void RestartGame()
+    {
+        //SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
+
+    private Vector3 StartingPosition()
+    {
+        float x = Random.Range(-4.5f, -5f);
+        Vector3 location = new Vector3(x, 0, -1);
+        return location;
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        
+    }
+}
