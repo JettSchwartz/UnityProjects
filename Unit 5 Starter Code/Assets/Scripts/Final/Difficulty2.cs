@@ -10,12 +10,12 @@ public class Difficulty2 : MonoBehaviour
     [SerializeField]
     private int diff;
 
-    private GameManager gmScript;
+    private GameManager2 gmScript;
 
     private void Awake()
     {
         button = GetComponent<Button>();
-        gmScript = GameObject.Find("SpawnManager").GetComponent<GameManager>();
+        gmScript = GameObject.Find("SpawnManager").GetComponent<GameManager2>();
     }
 
     // Start is called before the first frame update

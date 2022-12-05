@@ -3,19 +3,20 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class GameManager2 : MonoBehaviour
 {
     [SerializeField]
-    public GameObject[] targetPrefab;
+    private GameObject[] targetPrefab;
 
     [SerializeField]
-    public GameObject[] targetHalves;
+    private GameObject[] spawn;
 
     private float spawnRate = 3.0f;
 
     private int score, lives;
-    
+
     // This adds TMPro object
     [SerializeField]
     private TextMeshProUGUI scoreText;
@@ -35,12 +36,12 @@ public class GameManager2 : MonoBehaviour
     private AudioSource gameAudio;
 
     [SerializeField]
-    private AudioClip chop, miss, wrong;
+    private AudioClip click, miss, wrong;
 
     [SerializeField]
     private GameObject titleScreen;
 
-    public int size;
+    public int length;
 
     private void Awake()
     {
@@ -48,13 +49,13 @@ public class GameManager2 : MonoBehaviour
     }
 
     // This will run after the difficulty is chosen
-    public void StartGame(int difficulty)
+    public void StartGame(int numOfEnemies)
     {
         // Hide the title screen
         titleScreen.gameObject.SetActive(false);
 
-        // Based on difficulty, the size will be set
-        size = difficulty;
+        // Based on number, the enemies will be set
+        length = numOfEnemies;
 
         score = 0;
         lives = 3;
@@ -67,12 +68,12 @@ public class GameManager2 : MonoBehaviour
         {
             yield return new WaitForSeconds(spawnRate);
             int choice = Random.Range(0, targetPrefab.Length);
-            GameObject fruit = targetPrefab[choice];
+            GameObject person = targetPrefab[choice];
 
             // Change size of fruit
-            fruit.transform.localScale = new Vector3(size, size, size);
+            person.transform.localScale = new Vector3(2, 2, 2);
 
-            Instantiate(fruit, StartingPosition(), fruit.transform.rotation);
+            Instantiate(person, StartingPosition(), person.transform.rotation);
         }
     }
 
@@ -87,27 +88,27 @@ public class GameManager2 : MonoBehaviour
     {
         lives--;
         livesText.text = "Lives: " + lives;
-        
-        if (lives ==0)
+
+        if (lives == 0)
         {
             // Change the game status to inactive
             GameOver();
         }
     }
 
-    public void PlaySound(string fruit)
+    public void PlaySound(string person)
     {
-        if (fruit == "Onion")
+        if (person == "ghost")
         {
             gameAudio.PlayOneShot(wrong);
         }
-        else if (fruit == "Miss")
+        else if (person == "Miss")
         {
             gameAudio.PlayOneShot(miss);
         }
-        else 
+        else
         {
-            gameAudio.PlayOneShot(chop);
+            gameAudio.PlayOneShot(click);
         }
     }
     private void GameOver()
@@ -120,19 +121,17 @@ public class GameManager2 : MonoBehaviour
 
     public void RestartGame()
     {
-        //SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
     private Vector3 StartingPosition()
     {
-        float x = Random.Range(-4.5f, -5f);
-        Vector3 location = new Vector3(x, 0, -1);
-        return location;
+        
     }
 
-    // Update is called once per frame
-    void Update()
+    private void Update()
     {
         
     }
+
 }
