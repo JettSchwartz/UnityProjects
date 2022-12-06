@@ -13,6 +13,7 @@ TagManager:
   - Egg
   - Mushroom
   - Onion
+  - Ghost
   layers:
   - Default
   - TransparentFX

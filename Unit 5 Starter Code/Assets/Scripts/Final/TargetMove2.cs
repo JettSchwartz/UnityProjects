@@ -9,6 +9,9 @@ public class TargetMove2 : MonoBehaviour
     private GameManager2 gmScript;
 
     [SerializeField]
+    private ParticleSystem splash;
+
+    [SerializeField]
     private int points;
 
     private void Awake()
@@ -45,7 +48,7 @@ public class TargetMove2 : MonoBehaviour
         {
             Destroy(gameObject);
             // When the item is not an onion, the player is penalized and loses a life
-            if (!gameObject.CompareTag("Onion"))
+            if (!gameObject.CompareTag("Ghost"))
             {
                 gmScript.UpdateScore(-5);
                 gmScript.UpdateLives();
@@ -63,11 +66,7 @@ public class TargetMove2 : MonoBehaviour
             {
                 Instantiate(splash, gameObject.transform.position, gameObject.transform.rotation);
 
-                // Change size of fruit halves
-                gmScript.targetHalves[i].transform.localScale = new Vector3(gmScript.size, gmScript.size, gmScript.size);
-
-                Instantiate(gmScript.targetHalves[i], gameObject.transform.position, gameObject.transform.rotation);
-                Instantiate(gmScript.targetHalves[i], gameObject.transform.position, gameObject.transform.rotation);
+                
                 gmScript.UpdateScore(points);
                 // Pass the fruit that has been clicked on
                 gmScript.PlaySound(gmScript.targetPrefab[i].tag);

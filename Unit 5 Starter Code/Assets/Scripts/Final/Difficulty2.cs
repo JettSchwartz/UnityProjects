@@ -8,7 +8,7 @@ public class Difficulty2 : MonoBehaviour
     private Button button;
 
     [SerializeField]
-    private int diff;
+    private int num;
 
     private GameManager2 gmScript;
 
@@ -26,6 +26,6 @@ public class Difficulty2 : MonoBehaviour
 
     private void SetDifficulty()
     {
-        gmScript.StartGame(diff);
+        gmScript.StartGame(num);
     }
 }

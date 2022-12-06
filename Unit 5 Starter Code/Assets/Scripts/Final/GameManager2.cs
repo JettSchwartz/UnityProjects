@@ -8,10 +8,10 @@ using UnityEngine.SceneManagement;
 public class GameManager2 : MonoBehaviour
 {
     [SerializeField]
-    private GameObject[] targetPrefab;
+    public GameObject[] targetPrefab;
 
     [SerializeField]
-    private GameObject[] spawn;
+    public GameObject[] spawn;
 
     private float spawnRate = 3.0f;
 
@@ -70,6 +70,7 @@ public class GameManager2 : MonoBehaviour
             int choice = Random.Range(0, targetPrefab.Length);
             GameObject person = targetPrefab[choice];
 
+
             // Change size of fruit
             person.transform.localScale = new Vector3(2, 2, 2);
 
@@ -126,9 +127,12 @@ public class GameManager2 : MonoBehaviour
 
     private Vector3 StartingPosition()
     {
-        
+        int choice = Random.Range(0, spawn.Length);
+        GameObject grave = spawn[choice];
+        Vector3 location = new Vector3(grave.transform.position.x, grave.transform.position.y, 1.8f);
+        return location;
     }
-
+    
     private void Update()
     {
         

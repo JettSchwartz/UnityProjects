@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 1157654141132655747}
   m_Layer: 0
   m_Name: vampire
-  m_TagString: Untagged
+  m_TagString: Ghost
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -26,7 +26,7 @@ Transform:
   m_GameObject: {fileID: 29517352193266862}
   m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
   m_LocalPosition: {x: 1.5400002, y: -0.01713571, z: 1.885}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children:
   - {fileID: 1653831895644004238}
   - {fileID: 4735696340623546987}
