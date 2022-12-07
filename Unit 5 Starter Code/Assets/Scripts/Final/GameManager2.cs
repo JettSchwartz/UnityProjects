@@ -51,6 +51,7 @@ public class GameManager2 : MonoBehaviour
     // This will run after the difficulty is chosen
     public void StartGame(int numOfEnemies)
     {
+        Debug.Log("ok");
         // Hide the title screen
         titleScreen.gameObject.SetActive(false);
 
@@ -66,6 +67,7 @@ public class GameManager2 : MonoBehaviour
     {
         while (isGameActive)
         {
+            Debug.Log("whatever");
             yield return new WaitForSeconds(spawnRate);
             int choice = Random.Range(0, targetPrefab.Length);
             GameObject person = targetPrefab[choice];
@@ -75,6 +77,7 @@ public class GameManager2 : MonoBehaviour
             person.transform.localScale = new Vector3(2, 2, 2);
 
             Instantiate(person, StartingPosition(), person.transform.rotation);
+            length = length - 1;
         }
     }
 
@@ -88,9 +91,9 @@ public class GameManager2 : MonoBehaviour
     public void UpdateLives()
     {
         lives--;
-        livesText.text = "Lives: " + lives;
+        livesText.text = "Lives: " + length;
 
-        if (lives == 0)
+        if (length == 0)
         {
             // Change the game status to inactive
             GameOver();

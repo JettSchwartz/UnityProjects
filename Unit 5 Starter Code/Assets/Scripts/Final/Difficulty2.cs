@@ -8,13 +8,14 @@ public class Difficulty2 : MonoBehaviour
     private Button button;
 
     [SerializeField]
-    private int num;
+    public int num;
 
     private GameManager2 gmScript;
 
     private void Awake()
     {
         button = GetComponent<Button>();
+
         gmScript = GameObject.Find("SpawnManager").GetComponent<GameManager2>();
     }
 

@@ -9,9 +9,6 @@ public class TargetMove2 : MonoBehaviour
     private GameManager2 gmScript;
 
     [SerializeField]
-    private ParticleSystem splash;
-
-    [SerializeField]
     private int points;
 
     private void Awake()
@@ -24,27 +21,15 @@ public class TargetMove2 : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        float x = Random.Range(1f, 1.75f) * 3;
-        float y = Random.Range(1f, 1.6f) * 6;
-        Vector3 dir = new Vector3(x, y, 0);
-        targetRB.AddForce(dir, ForceMode.Impulse);
-        targetRB.AddTorque(RandomTorque(), ForceMode.Impulse);
-    }
-
-    private Vector3 RandomTorque()
-    {
-        float x = Random.Range(-10, 10);
-        float y = Random.Range(-10, 10);
-        float z = Random.Range(-10, 10);
-        Vector3 spin = new Vector3(x, y, z);
-        return spin;
+        
     }
 
 
     // Update is called once per frame
     void Update()
     {
-        if (transform.position.x > 7f || transform.position.y < -1f)
+        transform.Translate(Vector3.up * 5 * Time.deltaTime,Space.World);
+        if (transform.position.y > 6)
         {
             Destroy(gameObject);
             // When the item is not an onion, the player is penalized and loses a life
@@ -64,7 +49,7 @@ public class TargetMove2 : MonoBehaviour
         {
             if (gameObject.CompareTag(gmScript.targetPrefab[i].tag))
             {
-                Instantiate(splash, gameObject.transform.position, gameObject.transform.rotation);
+                //Instantiate(splash, gameObject.transform.position, gameObject.transform.rotation);
 
                 
                 gmScript.UpdateScore(points);

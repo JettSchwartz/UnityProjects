@@ -3203,10 +3203,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1097289057}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a23de07cdc304504fa58aa0d568d3efa, type: 3}
+  m_Script: {fileID: 11500000, guid: 4debcb8717ae4451998fd570ae0f8f5f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  diff: 10
+  num: 15
 --- !u!114 &1097289060
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3250,19 +3250,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1097289061}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1586083018}
-        m_TargetAssemblyTypeName: GameManager2, Assembly-CSharp
-        m_MethodName: StartGame
-        m_Mode: 3
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &1097289061
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3429,7 +3417,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Lives: 3'
+  m_text: 'People: 15'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -4275,7 +4263,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4debcb8717ae4451998fd570ae0f8f5f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  num: 40
+  num: 60
 --- !u!114 &1535911598
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4319,19 +4307,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1535911599}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1586083018}
-        m_TargetAssemblyTypeName: GameManager2, Assembly-CSharp
-        m_MethodName: StartGame
-        m_Mode: 3
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &1535911599
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5679,10 +5655,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1951633476}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a23de07cdc304504fa58aa0d568d3efa, type: 3}
+  m_Script: {fileID: 11500000, guid: 4debcb8717ae4451998fd570ae0f8f5f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  diff: 20
+  num: 30
 --- !u!114 &1951633479
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5726,19 +5702,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1951633480}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1586083018}
-        m_TargetAssemblyTypeName: GameManager2, Assembly-CSharp
-        m_MethodName: StartGame
-        m_Mode: 3
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 10
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &1951633480
 MonoBehaviour:
   m_ObjectHideFlags: 0
