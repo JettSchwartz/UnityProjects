@@ -10,6 +10,8 @@ public class Difficulty2 : MonoBehaviour
     [SerializeField]
     public int num;
 
+    public int people = 1;
+
     private GameManager2 gmScript;
 
     private void Awake()
@@ -28,5 +30,10 @@ public class Difficulty2 : MonoBehaviour
     private void SetDifficulty()
     {
         gmScript.StartGame(num);
+    }
+
+    public void UpdatePeople()
+    {
+        num = num - people;
     }
 }

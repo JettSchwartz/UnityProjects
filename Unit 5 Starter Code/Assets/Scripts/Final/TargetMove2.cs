@@ -33,30 +33,17 @@ public class TargetMove2 : MonoBehaviour
         {
             Destroy(gameObject);
             // When the item is not an onion, the player is penalized and loses a life
-            if (!gameObject.CompareTag("Ghost"))
-            {
-                gmScript.UpdateScore(-5);
-                gmScript.UpdateLives();
-                gmScript.PlaySound("Miss");
-            }
+           
+            gmScript.UpdateScore2();
+            
         }
     }
 
     // Checks to see which prefab has been chopped
     private void OnMouseDown()
     {
-        for (int i = 0; i < gmScript.targetPrefab.Length; i++)
-        {
-            if (gameObject.CompareTag(gmScript.targetPrefab[i].tag))
-            {
-                //Instantiate(splash, gameObject.transform.position, gameObject.transform.rotation);
-
-                
-                gmScript.UpdateScore(points);
-                // Pass the fruit that has been clicked on
-                gmScript.PlaySound(gmScript.targetPrefab[i].tag);
-                Destroy(gameObject);
-            }
-        }
+            gmScript.UpdateScore();
+            // Pass the fruit that has been clicked on
+            Destroy(gameObject);
     }
 }

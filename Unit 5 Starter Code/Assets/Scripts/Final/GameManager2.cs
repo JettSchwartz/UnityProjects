@@ -7,6 +7,8 @@ using UnityEngine.SceneManagement;
 
 public class GameManager2 : MonoBehaviour
 {
+    private Difficulty2 pmScript;
+
     [SerializeField]
     public GameObject[] targetPrefab;
 
@@ -15,7 +17,7 @@ public class GameManager2 : MonoBehaviour
 
     private float spawnRate = 3.0f;
 
-    private int score, lives;
+    private int score, scoreIncrease;
 
     // This adds TMPro object
     [SerializeField]
@@ -46,6 +48,7 @@ public class GameManager2 : MonoBehaviour
     private void Awake()
     {
         gameAudio = GetComponent<AudioSource>();
+        pmScript = GameObject.Find("TitleScreen").GetComponent<Difficulty2>();
     }
 
     // This will run after the difficulty is chosen
@@ -59,7 +62,6 @@ public class GameManager2 : MonoBehaviour
         length = numOfEnemies;
 
         score = 0;
-        lives = 3;
         startFruit = StartCoroutine(SpawnTarget());
     }
 
@@ -67,37 +69,41 @@ public class GameManager2 : MonoBehaviour
     {
         while (isGameActive)
         {
-            Debug.Log("whatever");
-            yield return new WaitForSeconds(spawnRate);
-            int choice = Random.Range(0, targetPrefab.Length);
-            GameObject person = targetPrefab[choice];
+            if (pmScript.num > 0)
+            {
+                Debug.Log("whatever");
+                yield return new WaitForSeconds(spawnRate);
+                int choice = Random.Range(0, targetPrefab.Length);
+                GameObject person = targetPrefab[choice];
 
 
-            // Change size of fruit
-            person.transform.localScale = new Vector3(2, 2, 2);
+                // Change size of fruit
+                person.transform.localScale = new Vector3(2, 2, 2);
 
-            Instantiate(person, StartingPosition(), person.transform.rotation);
-            length = length - 1;
+                Instantiate(person, StartingPosition(), person.transform.rotation);
+                length = length - 1;
+                pmScript.UpdatePeople();
+            }
+            else
+            {
+                GameOver();
+            }
         }
+
+        
     }
 
     // This weill adjust score
-    public void UpdateScore(int points)
+    public void UpdateScore()
     {
-        score += points;
+        scoreIncrease += 1;
+        score += scoreIncrease;
         scoreText.text = "Score: " + score;
     }
 
-    public void UpdateLives()
+    public void UpdateScore2()
     {
-        lives--;
-        livesText.text = "Lives: " + length;
-
-        if (length == 0)
-        {
-            // Change the game status to inactive
-            GameOver();
-        }
+        scoreIncrease = 1;
     }
 
     public void PlaySound(string person)
