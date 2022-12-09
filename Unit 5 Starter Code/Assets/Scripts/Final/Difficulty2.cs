@@ -31,9 +31,4 @@ public class Difficulty2 : MonoBehaviour
     {
         gmScript.StartGame(num);
     }
-
-    public void UpdatePeople()
-    {
-        num = num - people;
-    }
 }

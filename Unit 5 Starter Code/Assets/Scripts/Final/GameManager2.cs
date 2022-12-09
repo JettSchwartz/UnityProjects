@@ -60,7 +60,7 @@ public class GameManager2 : MonoBehaviour
 
         // Based on number, the enemies will be set
         length = numOfEnemies;
-
+        livesText.text = "People: " + length;
         score = 0;
         startFruit = StartCoroutine(SpawnTarget());
     }
@@ -69,7 +69,7 @@ public class GameManager2 : MonoBehaviour
     {
         while (isGameActive)
         {
-            if (pmScript.num > 0)
+            if (length > 0)
             {
                 Debug.Log("whatever");
                 yield return new WaitForSeconds(spawnRate);
@@ -81,8 +81,7 @@ public class GameManager2 : MonoBehaviour
                 person.transform.localScale = new Vector3(2, 2, 2);
 
                 Instantiate(person, StartingPosition(), person.transform.rotation);
-                length = length - 1;
-                pmScript.UpdatePeople();
+                UpdatePeople();
             }
             else
             {
@@ -91,6 +90,12 @@ public class GameManager2 : MonoBehaviour
         }
 
         
+    }
+    public void UpdatePeople()
+    {
+        print("a");
+        length = length - 1;
+        livesText.text = "People: " + length;
     }
 
     // This weill adjust score
