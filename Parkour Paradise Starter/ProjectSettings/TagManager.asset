@@ -5,6 +5,11 @@ TagManager:
   serializedVersion: 2
   tags:
   - Water
+  - Stick
+  - Spike
+  - Button
+  - PowerUp
+  - Coin
   layers:
   - Default
   - TransparentFX
