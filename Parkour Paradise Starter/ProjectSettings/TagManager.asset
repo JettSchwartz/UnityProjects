@@ -10,6 +10,7 @@ TagManager:
   - Button
   - PowerUp
   - Coin
+  - Ground
   layers:
   - Default
   - TransparentFX
