@@ -46,4 +46,4 @@ public class TargetMove2 : MonoBehaviour
             // Pass the fruit that has been clicked on
             Destroy(gameObject);
     }
-}
+}   
