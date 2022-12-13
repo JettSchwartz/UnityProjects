@@ -16,6 +16,9 @@ public class BallMove : MonoBehaviour
 
     private float jumpForce = 5f;
     private bool isGrounded = true;
+    private bool hasPU = false;
+
+
 
     private void Awake()
     {
@@ -68,7 +71,31 @@ public class BallMove : MonoBehaviour
             isGrounded = true;
         }
         // If the player collides the enemy and has the powerup, we will knockback the enemy
+        if (collision.gameObject.CompareTag("Spike") || collision.gameObject.CompareTag("Water"))
+        {
+            transform.position = new Vector3(70.76f, 0.71f, 28.5f);
+        }
+        if (hasPU == true)
+        {
+            speed = 7.0f;
+        }
+        if (hasPU == false)
+        {
+            speed = 3.0f;
+        }
+        if (collision.gameObject.CompareTag("PowerUp"))
+        {
+            Destroy(collision.gameObject);
+            hasPU = true;
+            puIndicator.SetActive(true);
+            StartCoroutine(CountdownTimer());
+        }
+        if (collision.gameObject.CompareTag("Button"))
+        {
+            playerRB.AddForce(Vector3.up * 20f, ForceMode.Impulse);
+        }
     }
+
 
     private void OnTriggerEnter(Collider other)
     {
@@ -79,6 +106,7 @@ public class BallMove : MonoBehaviour
     private IEnumerator CountdownTimer()
     {
         yield return new WaitForSeconds(7);
+        hasPU = false;
         puIndicator.SetActive(false);
     }
 }
