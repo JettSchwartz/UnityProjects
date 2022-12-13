@@ -32,7 +32,7 @@ public class BallMove : MonoBehaviour
     void Update()
     {
         // Make the powerup follow the player around
-        puIndicator.transform.position = transform.position + new Vector3(0f, 0.5f, 0f);
+        puIndicator.transform.position = transform.position + new Vector3(0f, 2, 0f);
         Move();
         Jump();
     }
