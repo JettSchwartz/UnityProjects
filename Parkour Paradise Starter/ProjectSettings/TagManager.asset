@@ -11,6 +11,8 @@ TagManager:
   - PowerUp
   - Coin
   - Ground
+  - Trophy
+  - BigSpike
   layers:
   - Default
   - TransparentFX
