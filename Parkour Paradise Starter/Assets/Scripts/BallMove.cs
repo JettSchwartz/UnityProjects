@@ -21,6 +21,8 @@ public class BallMove : MonoBehaviour
     private GameManager gmScript;
     private MoveSpikes msScript;
 
+    public bool leverOn = false;
+
     private void Awake()
     {
         playerRB = GetComponent<Rigidbody>();
@@ -86,7 +88,7 @@ public class BallMove : MonoBehaviour
         }
         if (collision.gameObject.CompareTag("Stick"))
         {
-            msScript.MoveSpike();
+            leverOn = true;
         }
 
         if (hasPU == true)

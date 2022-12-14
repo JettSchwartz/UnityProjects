@@ -4,13 +4,29 @@ using UnityEngine;
 
 public class MoveSpikes : MonoBehaviour
 {
-    public GameObject spike1;
-    public GameObject spike2;
-    // Start is called before the first frame update
-    public void MoveSpike()
+    private BallMove ballScript;
+
+
+    private float moveDistance = 0.1f;
+    private float speed = 2f;
+
+    private void Start()
     {
-        spike1.transform.position = new Vector3(132, 168.37f, 19.58f);
-        spike2.transform.position = new Vector3(150, 168.37f, 19.58f);
-        Debug.Log("a");
+        GameObject ball = GameObject.Find("ball");
+        ballScript = ball.GetComponent<BallMove>();
+    }
+
+    // Start is called before the first frame update
+    private void Update()
+    {
+        if (ballScript.leverOn == false)
+        {
+            return;
+        }
+
+        float distance = (Mathf.Sin(Time.time * speed)) * moveDistance * 60 / 2;
+        print(distance);
+        transform.Translate(Vector3.down * distance * Time.deltaTime, Space.Self);
+
     }
 }
