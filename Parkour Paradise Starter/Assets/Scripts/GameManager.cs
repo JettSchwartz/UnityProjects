@@ -76,7 +76,6 @@ public class GameManager : MonoBehaviour
         gameOverText.gameObject.SetActive(true);
         restartButton.gameObject.SetActive(true);
         Cursor.lockState = CursorLockMode.None;
-        msScript.ResetSpike();
     }
 
     public void RestartGame()
