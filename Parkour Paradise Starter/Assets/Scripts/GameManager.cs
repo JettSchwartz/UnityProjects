@@ -19,16 +19,18 @@ public class GameManager : MonoBehaviour
     public bool isGameActive = false;
 
     [SerializeField]
-    private GameObject titleScreen;
+    private GameObject titleScreen, trophy;
 
     public int livesNum;
     public int coinsNum;
 
+    private MoveSpikes msScript;
     private void Awake()
     {
         coinsNum = 10;
         RemainingCoinsText.text = "Remaining Coins: " + coinsNum;
         livesText.text = "Lives Left: " + livesNum;
+        msScript = GameObject.Find("Spikes").GetComponent<MoveSpikes>();
     }
     public void StartGame(int difficulty)
     {
@@ -48,7 +50,7 @@ public class GameManager : MonoBehaviour
         if (coinsNum == 0)
         {
             // Change the game status to inactive
-            GameOver();
+            SpawnPrize();
         }
     }
 
@@ -64,12 +66,17 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    private void GameOver()
+    private void SpawnPrize()
+    {
+        trophy.gameObject.SetActive(true);
+    }
+    public void GameOver()
     {
         isGameActive = false;
         gameOverText.gameObject.SetActive(true);
         restartButton.gameObject.SetActive(true);
         Cursor.lockState = CursorLockMode.None;
+        msScript.ResetSpike();
     }
 
     public void RestartGame()

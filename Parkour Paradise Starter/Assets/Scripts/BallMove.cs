@@ -19,11 +19,13 @@ public class BallMove : MonoBehaviour
     private bool hasPU = false;
 
     private GameManager gmScript;
+    private MoveSpikes msScript;
 
     private void Awake()
     {
         playerRB = GetComponent<Rigidbody>();
         gmScript = GameObject.Find("GameManager").GetComponent<GameManager>();
+        msScript = GameObject.Find("Spikes").GetComponent<MoveSpikes>();
     }
 
     // Start is called before the first frame update
@@ -82,6 +84,10 @@ public class BallMove : MonoBehaviour
             transform.position = new Vector3(70.76f, 0.71f, 28.5f);
             gmScript.UpdateLives();
         }
+        if (collision.gameObject.CompareTag("Stick"))
+        {
+            msScript.MoveSpike();
+        }
 
         if (hasPU == true)
         {
@@ -104,6 +110,11 @@ public class BallMove : MonoBehaviour
         if (collision.gameObject.CompareTag("Button"))
         {
             playerRB.AddForce(Vector3.up * 40f, ForceMode.Impulse);
+        }
+
+        if (collision.gameObject.CompareTag("Trophy"))
+        {
+            gmScript.GameOver();
         }
     }
 
