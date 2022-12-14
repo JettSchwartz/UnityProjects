@@ -14,15 +14,16 @@ public class BallMove : MonoBehaviour
     private float speed = 3.0f;
     private float gravity = 1.0f;
 
-    private float jumpForce = 5f;
+    private float jumpForce = 20f;
     private bool isGrounded = true;
     private bool hasPU = false;
 
-
+    private GameManager gmScript;
 
     private void Awake()
     {
         playerRB = GetComponent<Rigidbody>();
+        gmScript = GameObject.Find("GameManager").GetComponent<GameManager>();
     }
 
     // Start is called before the first frame update
@@ -42,15 +43,19 @@ public class BallMove : MonoBehaviour
 
     private void Move()
     {
-        // Get user input to control left, right, forward and back movement
-        float x = Input.GetAxis("Horizontal");
-        float z = Input.GetAxis("Vertical");
+        if (gmScript.isGameActive == true)
+        {
+            // Get user input to control left, right, forward and back movement
+            float x = Input.GetAxis("Horizontal");
+            float z = Input.GetAxis("Vertical");
 
-        // Move the player based on key presses
-        Vector3 dir = look.right * x + look.forward * z;
 
-        dir *= speed;
-        playerRB.AddForce(dir, ForceMode.Force);
+            // Move the player based on key presses
+            Vector3 dir = look.right * x + look.forward * z;
+
+            dir *= speed;
+            playerRB.AddForce(dir, ForceMode.Force);
+        }
     }
 
     private void Jump()
@@ -70,19 +75,24 @@ public class BallMove : MonoBehaviour
         {
             isGrounded = true;
         }
+
         // If the player collides the enemy and has the powerup, we will knockback the enemy
         if (collision.gameObject.CompareTag("Spike") || collision.gameObject.CompareTag("Water"))
         {
             transform.position = new Vector3(70.76f, 0.71f, 28.5f);
+            gmScript.UpdateLives();
         }
+
         if (hasPU == true)
         {
-            speed = 7.0f;
+            jumpForce = 40.0f;
         }
+
         if (hasPU == false)
         {
-            speed = 3.0f;
+            jumpForce = 20.0f;
         }
+
         if (collision.gameObject.CompareTag("PowerUp"))
         {
             Destroy(collision.gameObject);
@@ -90,22 +100,17 @@ public class BallMove : MonoBehaviour
             puIndicator.SetActive(true);
             StartCoroutine(CountdownTimer());
         }
+
         if (collision.gameObject.CompareTag("Button"))
         {
-            playerRB.AddForce(Vector3.up * 20f, ForceMode.Impulse);
+            playerRB.AddForce(Vector3.up * 40f, ForceMode.Impulse);
         }
-    }
-
-
-    private void OnTriggerEnter(Collider other)
-    {
-
     }
 
     // Controls how long the player has the powerup
     private IEnumerator CountdownTimer()
     {
-        yield return new WaitForSeconds(7);
+        yield return new WaitForSeconds(20);
         hasPU = false;
         puIndicator.SetActive(false);
     }

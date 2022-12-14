@@ -26,6 +26,6 @@ public class Difficulty : MonoBehaviour
 
     private void SetDifficulty()
     {
-        //gmScript.StartGame(diff);
+        gmScript.StartGame(diff);
     }
 }

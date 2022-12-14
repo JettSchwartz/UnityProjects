@@ -9,9 +9,12 @@ public class CoinSpin : MonoBehaviour
     private float originalZ;
     private BallMove BallMoveScript;
 
+    private GameManager gmScript;
+
     private void Awake()
     {
         BallMoveScript = GameObject.Find("ball").GetComponent<BallMove>();
+        gmScript = GameObject.Find("GameManager").GetComponent<GameManager>();
     }
 
     // Start is called before the first frame update
@@ -31,6 +34,7 @@ public class CoinSpin : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
+            gmScript.UpdateCoins();
             Destroy(gameObject);
         }
 
