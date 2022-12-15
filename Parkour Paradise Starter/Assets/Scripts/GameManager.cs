@@ -80,7 +80,9 @@ public class GameManager : MonoBehaviour
 
     public void RestartGame()
     {
+        Debug.Log("Mr. Cox Won't Answer My Questions");
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        
     }
 
     // Start is called before the first frame update
