@@ -26,11 +26,6 @@ public class LookAround : MonoBehaviour
         player.eulerAngles += Vector3.up * y * sensitivity;
         transform.eulerAngles += Vector3.up * y * sensitivity;
 
-        newX += x * sensitivity * -1f;
-
-        newX = Mathf.Clamp(newX, -25f, 50f);
-        transform.eulerAngles = new Vector3(newX, transform.eulerAngles.y, transform.eulerAngles.z);
-
         transform.position = player.position + new Vector3(0, 1, 0); 
     }
 }
