@@ -8,7 +8,7 @@ public class PlayerMove : MonoBehaviour
     private Transform look;
 
     private Rigidbody playerRB;
-    private float speed = 3.0f;
+    private float speed = 10.0f;
 
     private void Awake()
     {
