@@ -202,6 +202,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1cb3e0c14f67b40de83d8494197b078a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  minX: 600
+  maxX: 635
+  minZ: 100
+  maxZ: 120
+  minForce: 1
+  maxForce: 1
 --- !u!54 &98987023
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -286,7 +292,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh24880
+  m_Name: pb_Mesh24886
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -616,7 +622,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh24856
+  m_Name: pb_Mesh24862
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -1062,7 +1068,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh24894
+  m_Name: pb_Mesh24900
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -1570,7 +1576,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh24920
+  m_Name: pb_Mesh24926
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -6613,7 +6619,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4203609849368984366, guid: 2afacb67b8ce346d4beb92fd5eece74d, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 618.9375
+      value: 634.6
       objectReference: {fileID: 0}
     - target: {fileID: 4203609849368984366, guid: 2afacb67b8ce346d4beb92fd5eece74d, type: 3}
       propertyPath: m_LocalPosition.y
@@ -6621,7 +6627,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4203609849368984366, guid: 2afacb67b8ce346d4beb92fd5eece74d, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 109.686325
+      value: 116.4
       objectReference: {fileID: 0}
     - target: {fileID: 4203609849368984366, guid: 2afacb67b8ce346d4beb92fd5eece74d, type: 3}
       propertyPath: m_LocalRotation.w

@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class FlyWander : MonoBehaviour
 {
+    [SerializeField]
+    private float minX, maxX, minZ, maxZ, minForce, maxForce;
+
     private Rigidbody myRB;
     private Vector3 dir;
     private float flyForce;
@@ -27,12 +30,27 @@ public class FlyWander : MonoBehaviour
 
     private void Move()
     {
+        float newX;
+        float newZ;
+
         // apply force to move 
         myRB.AddForce(dir * flyForce, ForceMode.Force);
 
         // Point forward
         transform.forward = myRB.velocity;
 
+        // keep in bounds
+        newX = Mathf.Clamp(transform.position.x, minX, maxX);
+        newZ = Mathf.Clamp(transform.position.z, minZ, maxZ);
+
+        // turn around at edge of mountain
+        if (newX != transform.position.x || newZ != transform.position.z)
+        {
+            myRB.AddForce(myRB.velocity * -10, ForceMode.Force);
+        }
+
+        // apply boundary
+        transform.position = new Vector3(newX, transform.position.y, newZ);
     }
 
     private IEnumerator ChangeDir()
@@ -50,7 +68,7 @@ public class FlyWander : MonoBehaviour
             dir = new Vector3(newX, 0, newZ);
 
             // get new speed
-            flyForce = Random.Range(1.0f, 3.0f);
+            flyForce = Random.Range(minForce, maxForce);
 
             // wait random number of time before changing direction again
             waitTime = Random.Range(1.0f, 4.0f);
