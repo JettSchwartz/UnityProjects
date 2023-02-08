@@ -287,10 +287,10 @@ SphereCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 266577664}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 3
+  m_Radius: 3.25
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!43 &289868716
 Mesh:
@@ -6177,7 +6177,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 421066, guid: 2357bdd96b6ce844fa79e39acd2bdbbc, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.27
+      value: 3.53
       objectReference: {fileID: 0}
     - target: {fileID: 421066, guid: 2357bdd96b6ce844fa79e39acd2bdbbc, type: 3}
       propertyPath: m_LocalPosition.z
@@ -6308,6 +6308,19 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 421066, guid: 2357bdd96b6ce844fa79e39acd2bdbbc, type: 3}
   m_PrefabInstance: {fileID: 1247605772}
   m_PrefabAsset: {fileID: 0}
+--- !u!65 &1549181200
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1549181194}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1.7973384, z: 2.7881553}
+  m_Center: {x: 0, y: 0.8507892, z: 0.27746162}
 --- !u!1001 &1586056458
 PrefabInstance:
   m_ObjectHideFlags: 0
