@@ -2,21 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ChaseAttack : MonoBehaviour
+public class ChaseAttack : Attack
 {
     [SerializeField]
     private float chaseSpeed;
 
-    private Rigidbody myRB;
-    private Animator myAnim;
     private string runAnim = "Run";
-    private GameObject attackTarget = null;
-
-    private void Awake()
-    {
-        myRB = GetComponent<Rigidbody>();
-        myAnim = GetComponent<Animator>();
-    }
 
     // Start is called before the first frame update
     void Start()
@@ -30,15 +21,7 @@ public class ChaseAttack : MonoBehaviour
         Chase();
     }
 
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.gameObject.CompareTag("Player"))
-        {
-            Attack(other.gameObject);
-        }
-    }
-
-    private void Attack(GameObject target)
+    private override void Attack(GameObject target)
     {
         attackTarget = target;
         myAnim.SetBool(runAnim, true);
@@ -52,12 +35,13 @@ public class ChaseAttack : MonoBehaviour
             Vector3 dir = attackTarget.transform.position - transform.position;
             dir = dir.normalized;
 
+            dir.y = 0.2f;
             dir *= chaseSpeed;
 
             myRB.AddForce(dir, ForceMode.Force);
 
             //face forward
-            transform.forward = myRB.velocity;
+            transform.forward = new Vector3(myRB.velocity.x, transform.forward.y, myRB.velocity.z);
         }
     }
 }
