@@ -21,9 +21,10 @@ public class ChaseAttack : Attack
         Chase();
     }
 
-    private override void Attack(GameObject target)
+    protected override void DoAttack(GameObject target)
     {
-        attackTarget = target;
+        base.DoAttack(target);
+
         myAnim.SetBool(runAnim, true);
     }
 
