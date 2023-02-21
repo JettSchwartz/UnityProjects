@@ -5,6 +5,10 @@ TagManager:
   serializedVersion: 2
   tags:
   - Lava
+  - lb_bird
+  - lb_groundTarget
+  - lb_perchTarget
+  - Collectable
   layers:
   - Default
   - TransparentFX
