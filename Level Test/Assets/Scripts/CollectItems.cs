@@ -5,11 +5,12 @@ using UnityEngine;
 public class CollectItems : MonoBehaviour
 {
     int collected = 0;
+    Vector3 startPosition;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        startPosition = transform.position;
     }
 
     // Update is called once per frame
@@ -22,8 +23,7 @@ public class CollectItems : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Lava"))
         {
-            print("yes");
-            Destroy(gameObject);
+            transform.position = startPosition;
         }
 
         if (collision.gameObject.CompareTag("Collectable")) {
