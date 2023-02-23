@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class CollectItems : MonoBehaviour
 {
@@ -23,7 +24,13 @@ public class CollectItems : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Lava"))
         {
-            transform.position = startPosition;
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+            //transform.position = startPosition;
+        }
+
+        if (collision.gameObject.CompareTag("Enemy"))
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
 
         if (collision.gameObject.CompareTag("Collectable")) {

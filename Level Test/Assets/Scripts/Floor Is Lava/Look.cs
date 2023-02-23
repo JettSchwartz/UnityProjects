@@ -26,6 +26,6 @@ public class Look : MonoBehaviour
         player.eulerAngles += Vector3.up * y * sensitivity;
         transform.eulerAngles += Vector3.up * y * sensitivity;
 
-        transform.position = player.position + new Vector3(0, 0, -2);
+        transform.position = player.position + new Vector3(0, 0, 0);
     }
 }
