@@ -28,6 +28,11 @@ public class CollectItems : MonoBehaviour
             //transform.position = startPosition;
         }
 
+        if (collision.gameObject.CompareTag("Ground"))
+        {
+
+        }
+
         if (collision.gameObject.CompareTag("Enemy"))
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);

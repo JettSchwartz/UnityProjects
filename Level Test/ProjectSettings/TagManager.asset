@@ -9,6 +9,7 @@ TagManager:
   - lb_groundTarget
   - lb_perchTarget
   - Collectable
+  - Ground
   layers:
   - Default
   - TransparentFX

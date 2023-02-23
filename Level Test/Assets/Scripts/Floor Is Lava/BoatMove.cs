@@ -15,7 +15,7 @@ public class BoatMove : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        float offsetX = (Mathf.Sin(Time.time) + 1f) * 9f;
+        float offsetX = (Mathf.Sin(Time.time) + 1f) * 10f;
 
         transform.position = startPosition + new Vector3(offsetX, 0, 0);
     }

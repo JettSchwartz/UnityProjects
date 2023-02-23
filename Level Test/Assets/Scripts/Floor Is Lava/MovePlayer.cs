@@ -7,6 +7,9 @@ public class MovePlayer : MonoBehaviour
     [SerializeField]
     private Transform look;
 
+    private bool isGrounded = true;
+    private float jumpForce = 2f;
+
     private Rigidbody playerRB;
     private float speed = 10.0f;
 
@@ -21,10 +24,28 @@ public class MovePlayer : MonoBehaviour
 
     }
 
+    private void Jump()
+    {
+        // If the space key is pressed and we are on the ground we jump
+        if (Input.GetKeyDown(KeyCode.Space) && isGrounded == true)
+        {
+            playerRB.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
+            isGrounded = false;
+        }
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("Ground"))
+        {
+            isGrounded = true;
+        }
+    }
     // Update is called once per frame
     void Update()
     {
         Move();
+        Jump();
     }
 
     private void Move()
