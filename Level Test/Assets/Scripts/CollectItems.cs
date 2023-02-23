@@ -25,17 +25,14 @@ public class CollectItems : MonoBehaviour
         if (collision.gameObject.CompareTag("Lava"))
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+            collected = 0;
             //transform.position = startPosition;
-        }
-
-        if (collision.gameObject.CompareTag("Ground"))
-        {
-
         }
 
         if (collision.gameObject.CompareTag("Enemy"))
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+            collected = 0;
         }
 
         if (collision.gameObject.CompareTag("Collectable")) {

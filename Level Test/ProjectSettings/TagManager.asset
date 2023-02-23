@@ -10,6 +10,7 @@ TagManager:
   - lb_perchTarget
   - Collectable
   - Ground
+  - Enemy
   layers:
   - Default
   - TransparentFX
