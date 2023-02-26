@@ -1579,7 +1579,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400104, guid: 0a72544dc6a4b084480d0aeecaff43a2, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 659.35
+      value: 489.31
       objectReference: {fileID: 0}
     - target: {fileID: 400104, guid: 0a72544dc6a4b084480d0aeecaff43a2, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1587,7 +1587,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400104, guid: 0a72544dc6a4b084480d0aeecaff43a2, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 402.6679
+      value: 465.16
       objectReference: {fileID: 0}
     - target: {fileID: 400104, guid: 0a72544dc6a4b084480d0aeecaff43a2, type: 3}
       propertyPath: m_LocalRotation.w
@@ -1709,7 +1709,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 421066, guid: 2357bdd96b6ce844fa79e39acd2bdbbc, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 490.18674
+      value: 508.482
       objectReference: {fileID: 0}
     - target: {fileID: 421066, guid: 2357bdd96b6ce844fa79e39acd2bdbbc, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1717,7 +1717,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 421066, guid: 2357bdd96b6ce844fa79e39acd2bdbbc, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 471.03195
+      value: 448.34
       objectReference: {fileID: 0}
     - target: {fileID: 421066, guid: 2357bdd96b6ce844fa79e39acd2bdbbc, type: 3}
       propertyPath: m_LocalRotation.w
@@ -1801,6 +1801,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   chaseSpeed: 5
+--- !u!114 &1515739404
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1515739396}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 21ca140e8de0a044ebf35236dbbd7dbc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minX: 478
+  maxX: 524
+  minZ: 446
+  maxZ: 492
+  minForce: 5
+  maxForce: 15
 --- !u!1 &1637275247 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1685845671507644, guid: 2623fcc4ae72bed4681324fdc889e468, type: 3}
