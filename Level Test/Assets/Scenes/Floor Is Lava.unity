@@ -1620,7 +1620,7 @@ PrefabInstance:
     - target: {fileID: 9500000, guid: 0a72544dc6a4b084480d0aeecaff43a2, type: 3}
       propertyPath: m_Controller
       value: 
-      objectReference: {fileID: 9100000, guid: 2df22b4dfa1271b4f904a54f8077edb4, type: 2}
+      objectReference: {fileID: 9100000, guid: 727c5ee11e9e413fa17bba52ac4dca41, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0a72544dc6a4b084480d0aeecaff43a2, type: 3}
 --- !u!1 &1481169899 stripped
