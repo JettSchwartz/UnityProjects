@@ -2,30 +2,36 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class WanderFly : MonoBehaviour
+public class WanderFly : Attack
 {
+
+    [SerializeField]
+    private float jumpForce;
+
+    private bool isAttack = false;
+
     [SerializeField]
     private float minX, maxX, minZ, maxZ, minForce, maxForce;
 
-    private Rigidbody myRB;
     private Vector3 dir;
     private float flyForce;
-
-    private void Awake()
-    {
-        myRB = GetComponent<Rigidbody>();
-    }
 
     // Start is called before the first frame update
     void Start()
     {
-        StartCoroutine(ChangeDir());
+        if (isAttack == false)
+        {
+            StartCoroutine(ChangeDir());
+        }
     }
 
     // Update is called once per frame
     void Update()
     {
-        Move();
+        if (isAttack == false)
+        {
+            Move();
+        }
     }
 
     private void Move()
@@ -74,5 +80,25 @@ public class WanderFly : MonoBehaviour
             waitTime = Random.Range(1.0f, 4.0f);
             yield return new WaitForSeconds(waitTime);
         }
+    }
+
+    protected override void DoAttack(GameObject target)
+    {
+        base.DoAttack(target);
+        isAttack = true;
+
+        // get the jump direction
+        Vector3 dir = attackTarget.transform.position - transform.position;
+
+        dir = dir.normalized;
+
+        // add in the force
+        dir *= jumpForce;
+
+        // apply to force
+        myRB.AddForce(dir, ForceMode.Impulse);
+
+        // face forward
+        transform.forward = dir;
     }
 }
