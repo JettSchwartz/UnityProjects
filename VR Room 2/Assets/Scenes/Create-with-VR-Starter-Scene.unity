@@ -3480,170 +3480,6 @@ MonoBehaviour:
   m_SelectedFaces: 
   m_SelectedEdges: []
   m_SelectedVertices: 
---- !u!43 &380393896
-Mesh:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh29110
-  serializedVersion: 10
-  m_SubMeshes:
-  - serializedVersion: 2
-    firstByte: 0
-    indexCount: 36
-    topology: 0
-    baseVertex: 0
-    firstVertex: 0
-    vertexCount: 24
-    localAABB:
-      m_Center: {x: 0.25249562, y: 0.71628374, z: 0.4640808}
-      m_Extent: {x: 0.125, y: 2.5, z: 1.5905895}
-  m_Shapes:
-    vertices: []
-    shapes: []
-    channels: []
-    fullWeights: []
-  m_BindPose: []
-  m_BoneNameHashes: 
-  m_RootBoneNameHash: 0
-  m_BonesAABB: []
-  m_VariableBoneCountWeights:
-    m_Data: 
-  m_MeshCompression: 0
-  m_IsReadable: 1
-  m_KeepVertices: 1
-  m_KeepIndices: 1
-  m_IndexFormat: 0
-  m_IndexBuffer: 000001000200010003000200040005000600050007000600080009000a0009000b000a000c000d000e000d000f000e00100011001200110013001200140015001600150017001600
-  m_VertexData:
-    serializedVersion: 3
-    m_VertexCount: 24
-    m_Channels:
-    - stream: 0
-      offset: 0
-      format: 0
-      dimension: 3
-    - stream: 0
-      offset: 12
-      format: 0
-      dimension: 3
-    - stream: 0
-      offset: 24
-      format: 0
-      dimension: 4
-    - stream: 0
-      offset: 0
-      format: 0
-      dimension: 0
-    - stream: 0
-      offset: 40
-      format: 0
-      dimension: 2
-    - stream: 0
-      offset: 0
-      format: 0
-      dimension: 0
-    - stream: 0
-      offset: 0
-      format: 0
-      dimension: 0
-    - stream: 0
-      offset: 0
-      format: 0
-      dimension: 0
-    - stream: 0
-      offset: 0
-      format: 0
-      dimension: 0
-    - stream: 0
-      offset: 0
-      format: 0
-      dimension: 0
-    - stream: 0
-      offset: 0
-      format: 0
-      dimension: 0
-    - stream: 0
-      offset: 0
-      format: 0
-      dimension: 0
-    - stream: 0
-      offset: 0
-      format: 0
-      dimension: 0
-    - stream: 0
-      offset: 0
-      format: 0
-      dimension: 0
-    m_DataSize: 1152
-    _typelessdata: 368e023ed150e4bfb87f034000000000000000000000803f000080bf0000000000000000000080bf368e02bed150e4bf1b47c13ed150e4bfb87f034000000000000000000000803f000080bf0000000000000000000080bf1b47c1bed150e4bf368e023e98d74d40b87f034000000000000000000000803f000080bf0000000000000000000080bf368e02be98d74d401b47c13e98d74d40b87f034000000000000000000000803f000080bf0000000000000000000080bf1b47c1be98d74d401b47c13ed150e4bfb87f03400000803f000000000000000000000000000000000000803f000080bfb87f0340d150e4bf1b47c13ed150e4bf703190bf0000803f000000000000000000000000000000000000803f000080bf703190bfd150e4bf1b47c13e98d74d40b87f03400000803f000000000000000000000000000000000000803f000080bfb87f034098d74d401b47c13e98d74d40703190bf0000803f000000000000000000000000000000000000803f000080bf703190bf98d74d401b47c13ed150e4bf703190bf0000000000000000000080bf0000803f0000000000000000000080bf1b47c13ed150e4bf368e023ed150e4bf703190bf0000000000000000000080bf0000803f0000000000000000000080bf368e023ed150e4bf1b47c13e98d74d40703190bf0000000000000000000080bf0000803f0000000000000000000080bf1b47c13e98d74d40368e023e98d74d40703190bf0000000000000000000080bf0000803f0000000000000000000080bf368e023e98d74d40368e023ed150e4bf703190bf000080bf00000000000000000000000000000000000080bf000080bf7031903fd150e4bf368e023ed150e4bfb87f0340000080bf00000000000000000000000000000000000080bf000080bfb87f03c0d150e4bf368e023e98d74d40703190bf000080bf00000000000000000000000000000000000080bf000080bf7031903f98d74d40368e023e98d74d40b87f0340000080bf00000000000000000000000000000000000080bf000080bfb87f03c098d74d40368e023e98d74d40b87f0340000000000000803f000000000000803f0000000000000000000080bf368e023eb87f03401b47c13e98d74d40b87f0340000000000000803f000000000000803f0000000000000000000080bf1b47c13eb87f0340368e023e98d74d40703190bf000000000000803f000000000000803f0000000000000000000080bf368e023e703190bf1b47c13e98d74d40703190bf000000000000803f000000000000803f0000000000000000000080bf1b47c13e703190bf368e023ed150e4bf703190bf00000000000080bf00000000000080bf0000000000000000000080bf368e02be703190bf1b47c13ed150e4bf703190bf00000000000080bf00000000000080bf0000000000000000000080bf1b47c1be703190bf368e023ed150e4bfb87f034000000000000080bf00000000000080bf0000000000000000000080bf368e02beb87f03401b47c13ed150e4bfb87f034000000000000080bf00000000000080bf0000000000000000000080bf1b47c1beb87f0340
-  m_CompressedMesh:
-    m_Vertices:
-      m_NumItems: 0
-      m_Range: 0
-      m_Start: 0
-      m_Data: 
-      m_BitSize: 0
-    m_UV:
-      m_NumItems: 0
-      m_Range: 0
-      m_Start: 0
-      m_Data: 
-      m_BitSize: 0
-    m_Normals:
-      m_NumItems: 0
-      m_Range: 0
-      m_Start: 0
-      m_Data: 
-      m_BitSize: 0
-    m_Tangents:
-      m_NumItems: 0
-      m_Range: 0
-      m_Start: 0
-      m_Data: 
-      m_BitSize: 0
-    m_Weights:
-      m_NumItems: 0
-      m_Data: 
-      m_BitSize: 0
-    m_NormalSigns:
-      m_NumItems: 0
-      m_Data: 
-      m_BitSize: 0
-    m_TangentSigns:
-      m_NumItems: 0
-      m_Data: 
-      m_BitSize: 0
-    m_FloatColors:
-      m_NumItems: 0
-      m_Range: 0
-      m_Start: 0
-      m_Data: 
-      m_BitSize: 0
-    m_BoneIndices:
-      m_NumItems: 0
-      m_Data: 
-      m_BitSize: 0
-    m_Triangles:
-      m_NumItems: 0
-      m_Data: 
-      m_BitSize: 0
-    m_UVInfo: 0
-  m_LocalAABB:
-    m_Center: {x: 0.25249562, y: 0.71628374, z: 0.4640808}
-    m_Extent: {x: 0.125, y: 2.5, z: 1.5905895}
-  m_MeshUsageFlags: 0
-  m_BakedConvexCollisionMesh: 
-  m_BakedTriangleCollisionMesh: 
-  m_MeshMetrics[0]: 1
-  m_MeshMetrics[1]: 1
-  m_MeshOptimizationFlags: 1
-  m_StreamData:
-    serializedVersion: 2
-    offset: 0
-    size: 0
-    path: 
 --- !u!43 &401089897
 Mesh:
   m_ObjectHideFlags: 0
@@ -4280,6 +4116,7 @@ GameObject:
   - component: {fileID: 417814008}
   - component: {fileID: 417814007}
   - component: {fileID: 417814011}
+  - component: {fileID: 417814012}
   m_Layer: 0
   m_Name: Door (3)
   m_TagString: EnemyDoor
@@ -4409,7 +4246,19 @@ MonoBehaviour:
       m_Calls: []
   m_SelectEntered:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 417814012}
+        m_TargetAssemblyTypeName: DoorOpen, Assembly-CSharp
+        m_MethodName: OpenDoorFunction
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_SelectExited:
     m_PersistentCalls:
       m_Calls: []
@@ -4448,6 +4297,18 @@ MonoBehaviour:
   m_OnDeactivate:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &417814012
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 417814006}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6c4c2fb8716b40dbac7a5f76ae0e604, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &449510274
 GameObject:
   m_ObjectHideFlags: 0
@@ -6563,6 +6424,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: XR Device Simulator
       objectReference: {fileID: 0}
+    - target: {fileID: 6598815579406187037, guid: 9f5a24a380916d14db9775daab4fe333,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9f5a24a380916d14db9775daab4fe333, type: 3}
 --- !u!1 &642393826
@@ -7598,7 +7464,7 @@ MeshCollider:
   serializedVersion: 4
   m_Convex: 0
   m_CookingOptions: 30
-  m_Mesh: {fileID: 380393896}
+  m_Mesh: {fileID: 1964602097}
 --- !u!33 &843210610
 MeshFilter:
   m_ObjectHideFlags: 10
@@ -7606,7 +7472,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 843210608}
-  m_Mesh: {fileID: 380393896}
+  m_Mesh: {fileID: 1964602097}
 --- !u!23 &843210611
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -7887,8 +7753,8 @@ MonoBehaviour:
     m_AreaError: 15
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
-  m_Mesh: {fileID: 380393896}
-  m_VersionIndex: 20465
+  m_Mesh: {fileID: 1964602097}
+  m_VersionIndex: 20468
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -9158,6 +9024,7 @@ GameObject:
   - component: {fileID: 1015824973}
   - component: {fileID: 1015824972}
   - component: {fileID: 1015824976}
+  - component: {fileID: 1015824977}
   m_Layer: 0
   m_Name: Door (2)
   m_TagString: Door
@@ -9287,7 +9154,19 @@ MonoBehaviour:
       m_Calls: []
   m_SelectEntered:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1015824977}
+        m_TargetAssemblyTypeName: DoorOpen, Assembly-CSharp
+        m_MethodName: OpenDoorFunction
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_SelectExited:
     m_PersistentCalls:
       m_Calls: []
@@ -9326,6 +9205,18 @@ MonoBehaviour:
   m_OnDeactivate:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &1015824977
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1015824971}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6c4c2fb8716b40dbac7a5f76ae0e604, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1103510292
 GameObject:
   m_ObjectHideFlags: 0
@@ -10011,6 +9902,7 @@ GameObject:
   - component: {fileID: 1135248898}
   - component: {fileID: 1135248897}
   - component: {fileID: 1135248901}
+  - component: {fileID: 1135248902}
   m_Layer: 0
   m_Name: Door (4)
   m_TagString: EnemyDoor
@@ -10140,7 +10032,19 @@ MonoBehaviour:
       m_Calls: []
   m_SelectEntered:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1135248902}
+        m_TargetAssemblyTypeName: DoorOpen, Assembly-CSharp
+        m_MethodName: OpenDoorFunction
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_SelectExited:
     m_PersistentCalls:
       m_Calls: []
@@ -10179,6 +10083,18 @@ MonoBehaviour:
   m_OnDeactivate:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &1135248902
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1135248896}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6c4c2fb8716b40dbac7a5f76ae0e604, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!43 &1193386884
 Mesh:
   m_ObjectHideFlags: 0
@@ -10700,6 +10616,7 @@ GameObject:
   - component: {fileID: 1249001732}
   - component: {fileID: 1249001731}
   - component: {fileID: 1249001735}
+  - component: {fileID: 1249001736}
   m_Layer: 0
   m_Name: Door (5)
   m_TagString: Door
@@ -10829,7 +10746,19 @@ MonoBehaviour:
       m_Calls: []
   m_SelectEntered:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1249001736}
+        m_TargetAssemblyTypeName: DoorOpen, Assembly-CSharp
+        m_MethodName: OpenDoorFunction
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_SelectExited:
     m_PersistentCalls:
       m_Calls: []
@@ -10868,6 +10797,18 @@ MonoBehaviour:
   m_OnDeactivate:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &1249001736
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1249001730}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6c4c2fb8716b40dbac7a5f76ae0e604, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1273560461
 GameObject:
   m_ObjectHideFlags: 0
@@ -10881,6 +10822,7 @@ GameObject:
   - component: {fileID: 1273560463}
   - component: {fileID: 1273560462}
   - component: {fileID: 1273560466}
+  - component: {fileID: 1273560467}
   m_Layer: 0
   m_Name: Door (7)
   m_TagString: Door
@@ -11010,7 +10952,19 @@ MonoBehaviour:
       m_Calls: []
   m_SelectEntered:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1273560467}
+        m_TargetAssemblyTypeName: DoorOpen, Assembly-CSharp
+        m_MethodName: OpenDoorFunction
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_SelectExited:
     m_PersistentCalls:
       m_Calls: []
@@ -11049,6 +11003,18 @@ MonoBehaviour:
   m_OnDeactivate:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &1273560467
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1273560461}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6c4c2fb8716b40dbac7a5f76ae0e604, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!43 &1286729353
 Mesh:
   m_ObjectHideFlags: 0
@@ -12251,6 +12217,7 @@ GameObject:
   - component: {fileID: 1436523408}
   - component: {fileID: 1436523407}
   - component: {fileID: 1436523411}
+  - component: {fileID: 1436523412}
   m_Layer: 0
   m_Name: Door (6)
   m_TagString: Door
@@ -12380,7 +12347,19 @@ MonoBehaviour:
       m_Calls: []
   m_SelectEntered:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1436523412}
+        m_TargetAssemblyTypeName: DoorOpen, Assembly-CSharp
+        m_MethodName: OpenDoorFunction
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_SelectExited:
     m_PersistentCalls:
       m_Calls: []
@@ -12419,6 +12398,18 @@ MonoBehaviour:
   m_OnDeactivate:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &1436523412
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1436523406}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6c4c2fb8716b40dbac7a5f76ae0e604, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!43 &1440705948
 Mesh:
   m_ObjectHideFlags: 0
@@ -15240,6 +15231,7 @@ GameObject:
   - component: {fileID: 1699996537}
   - component: {fileID: 1699996541}
   - component: {fileID: 1699996542}
+  - component: {fileID: 1699996543}
   m_Layer: 0
   m_Name: Door
   m_TagString: Untagged
@@ -15386,13 +15378,13 @@ MonoBehaviour:
   m_SelectEntered:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 11500000, guid: c6c4c2fb8716b40dbac7a5f76ae0e604, type: 3}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
+      - m_Target: {fileID: 1699996543}
+        m_TargetAssemblyTypeName: DoorOpen, Assembly-CSharp
+        m_MethodName: OpenDoorFunction
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -15436,6 +15428,18 @@ MonoBehaviour:
   m_OnDeactivate:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &1699996543
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1699996536}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6c4c2fb8716b40dbac7a5f76ae0e604, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1761813076
 GameObject:
   m_ObjectHideFlags: 0
@@ -15793,6 +15797,7 @@ GameObject:
   - component: {fileID: 1883604760}
   - component: {fileID: 1883604759}
   - component: {fileID: 1883604763}
+  - component: {fileID: 1883604764}
   m_Layer: 0
   m_Name: Door (1)
   m_TagString: Door
@@ -15922,7 +15927,19 @@ MonoBehaviour:
       m_Calls: []
   m_SelectEntered:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1883604764}
+        m_TargetAssemblyTypeName: DoorOpen, Assembly-CSharp
+        m_MethodName: OpenDoorFunction
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_SelectExited:
     m_PersistentCalls:
       m_Calls: []
@@ -15961,6 +15978,18 @@ MonoBehaviour:
   m_OnDeactivate:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &1883604764
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1883604758}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6c4c2fb8716b40dbac7a5f76ae0e604, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!43 &1946054364
 Mesh:
   m_ObjectHideFlags: 0
@@ -16469,6 +16498,170 @@ MonoBehaviour:
   m_SelectedFaces: 
   m_SelectedEdges: []
   m_SelectedVertices: 
+--- !u!43 &1964602097
+Mesh:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: pb_Mesh29280
+  serializedVersion: 10
+  m_SubMeshes:
+  - serializedVersion: 2
+    firstByte: 0
+    indexCount: 36
+    topology: 0
+    baseVertex: 0
+    firstVertex: 0
+    vertexCount: 24
+    localAABB:
+      m_Center: {x: 0.25249562, y: 0.71628374, z: 0.4640808}
+      m_Extent: {x: 0.125, y: 2.5, z: 1.5905895}
+  m_Shapes:
+    vertices: []
+    shapes: []
+    channels: []
+    fullWeights: []
+  m_BindPose: []
+  m_BoneNameHashes: 
+  m_RootBoneNameHash: 0
+  m_BonesAABB: []
+  m_VariableBoneCountWeights:
+    m_Data: 
+  m_MeshCompression: 0
+  m_IsReadable: 1
+  m_KeepVertices: 1
+  m_KeepIndices: 1
+  m_IndexFormat: 0
+  m_IndexBuffer: 000001000200010003000200040005000600050007000600080009000a0009000b000a000c000d000e000d000f000e00100011001200110013001200140015001600150017001600
+  m_VertexData:
+    serializedVersion: 3
+    m_VertexCount: 24
+    m_Channels:
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 3
+    - stream: 0
+      offset: 12
+      format: 0
+      dimension: 3
+    - stream: 0
+      offset: 24
+      format: 0
+      dimension: 4
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    - stream: 0
+      offset: 40
+      format: 0
+      dimension: 2
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    m_DataSize: 1152
+    _typelessdata: 368e023ed150e4bfb87f034000000000000000000000803f000080bf0000000000000000000080bf368e02bed150e4bf1b47c13ed150e4bfb87f034000000000000000000000803f000080bf0000000000000000000080bf1b47c1bed150e4bf368e023e98d74d40b87f034000000000000000000000803f000080bf0000000000000000000080bf368e02be98d74d401b47c13e98d74d40b87f034000000000000000000000803f000080bf0000000000000000000080bf1b47c1be98d74d401b47c13ed150e4bfb87f03400000803f000000000000000000000000000000000000803f000080bfb87f0340d150e4bf1b47c13ed150e4bf703190bf0000803f000000000000000000000000000000000000803f000080bf703190bfd150e4bf1b47c13e98d74d40b87f03400000803f000000000000000000000000000000000000803f000080bfb87f034098d74d401b47c13e98d74d40703190bf0000803f000000000000000000000000000000000000803f000080bf703190bf98d74d401b47c13ed150e4bf703190bf0000000000000000000080bf0000803f0000000000000000000080bf1b47c13ed150e4bf368e023ed150e4bf703190bf0000000000000000000080bf0000803f0000000000000000000080bf368e023ed150e4bf1b47c13e98d74d40703190bf0000000000000000000080bf0000803f0000000000000000000080bf1b47c13e98d74d40368e023e98d74d40703190bf0000000000000000000080bf0000803f0000000000000000000080bf368e023e98d74d40368e023ed150e4bf703190bf000080bf00000000000000000000000000000000000080bf000080bf7031903fd150e4bf368e023ed150e4bfb87f0340000080bf00000000000000000000000000000000000080bf000080bfb87f03c0d150e4bf368e023e98d74d40703190bf000080bf00000000000000000000000000000000000080bf000080bf7031903f98d74d40368e023e98d74d40b87f0340000080bf00000000000000000000000000000000000080bf000080bfb87f03c098d74d40368e023e98d74d40b87f0340000000000000803f000000000000803f0000000000000000000080bf368e023eb87f03401b47c13e98d74d40b87f0340000000000000803f000000000000803f0000000000000000000080bf1b47c13eb87f0340368e023e98d74d40703190bf000000000000803f000000000000803f0000000000000000000080bf368e023e703190bf1b47c13e98d74d40703190bf000000000000803f000000000000803f0000000000000000000080bf1b47c13e703190bf368e023ed150e4bf703190bf00000000000080bf00000000000080bf0000000000000000000080bf368e02be703190bf1b47c13ed150e4bf703190bf00000000000080bf00000000000080bf0000000000000000000080bf1b47c1be703190bf368e023ed150e4bfb87f034000000000000080bf00000000000080bf0000000000000000000080bf368e02beb87f03401b47c13ed150e4bfb87f034000000000000080bf00000000000080bf0000000000000000000080bf1b47c1beb87f0340
+  m_CompressedMesh:
+    m_Vertices:
+      m_NumItems: 0
+      m_Range: 0
+      m_Start: 0
+      m_Data: 
+      m_BitSize: 0
+    m_UV:
+      m_NumItems: 0
+      m_Range: 0
+      m_Start: 0
+      m_Data: 
+      m_BitSize: 0
+    m_Normals:
+      m_NumItems: 0
+      m_Range: 0
+      m_Start: 0
+      m_Data: 
+      m_BitSize: 0
+    m_Tangents:
+      m_NumItems: 0
+      m_Range: 0
+      m_Start: 0
+      m_Data: 
+      m_BitSize: 0
+    m_Weights:
+      m_NumItems: 0
+      m_Data: 
+      m_BitSize: 0
+    m_NormalSigns:
+      m_NumItems: 0
+      m_Data: 
+      m_BitSize: 0
+    m_TangentSigns:
+      m_NumItems: 0
+      m_Data: 
+      m_BitSize: 0
+    m_FloatColors:
+      m_NumItems: 0
+      m_Range: 0
+      m_Start: 0
+      m_Data: 
+      m_BitSize: 0
+    m_BoneIndices:
+      m_NumItems: 0
+      m_Data: 
+      m_BitSize: 0
+    m_Triangles:
+      m_NumItems: 0
+      m_Data: 
+      m_BitSize: 0
+    m_UVInfo: 0
+  m_LocalAABB:
+    m_Center: {x: 0.25249562, y: 0.71628374, z: 0.4640808}
+    m_Extent: {x: 0.125, y: 2.5, z: 1.5905895}
+  m_MeshUsageFlags: 0
+  m_BakedConvexCollisionMesh: 
+  m_BakedTriangleCollisionMesh: 
+  m_MeshMetrics[0]: 1
+  m_MeshMetrics[1]: 1
+  m_MeshOptimizationFlags: 1
+  m_StreamData:
+    serializedVersion: 2
+    offset: 0
+    size: 0
+    path: 
 --- !u!1 &1970457803
 GameObject:
   m_ObjectHideFlags: 0

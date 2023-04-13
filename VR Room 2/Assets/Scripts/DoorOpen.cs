@@ -16,7 +16,7 @@ public class DoorOpen : MonoBehaviour
         
     }
 
-    public void OpenDoorFunction(SelectEnterEventArg args)
+    public void OpenDoorFunction()
     {
         this.gameObject.SetActive(false);
     }
