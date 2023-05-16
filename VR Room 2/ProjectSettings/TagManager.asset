@@ -9,6 +9,10 @@ TagManager:
   - EnemyDoor
   - Door
   - Weapon
+  - Type2
+  - Type1
+  - NoPickup
+  - Pickup
   layers:
   - Default
   - TransparentFX
